@@ -1,0 +1,93 @@
+@use "sass:math";
+@use "sass:map";
+
+// funcrions
+@function remSize($size) {
+	$remSize: math.div($size, 16px);
+	@return #{$remSize}rem;
+}
+
+// mixins
+@mixin setHslaColor($property, $hslcolor, $alpha: 1) {
+	#{$property}: hsla(
+		hue($hslcolor),
+		saturation($hslcolor),
+		lightness($hslcolor),
+		$alpha
+	);
+}
+
+@mixin pseudo($type: before, $pos: absolute, $content: "") {
+	position: relative;
+	&::#{$type} {
+		content: $content;
+		position: $pos;
+		@content;
+	}
+}
+
+$breakpoints: (
+	small: remSize(640px),
+	medium: remSize(768px),
+	large: remSize(1024px),
+);
+
+@mixin media($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
+// colors
+$clr-neutral-100: hsl(0, 0%, 100%);
+
+$clr-primary-200: hsl(243, 100%, 93%);
+$clr-primary-400: hsl(228, 56%, 26%);
+$clr-primary-800: hsl(229, 57%, 11%);
+
+$clr-accent-400: hsl(6, 100%, 80%);
+$clr-accent-600: hsl(335, 100%, 65%);
+
+$gradient-primary: linear-gradient(
+	90deg,
+	$clr-accent-400 0%,
+	$clr-accent-600 100%
+);
+
+$colors: (
+	"neutral": (
+		"100": $clr-neutral-100,
+	),
+	"primary": (
+		"200": $clr-primary-200,
+		"400": $clr-primary-400,
+		"800": $clr-primary-800,
+	),
+);
+
+// typography
+$ff-base: "Raleway", sans-serif;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+$fs-14: 0.75rem;
+$fs-14: 0.875rem;
+$fs-40: 2.5rem;
+
+// utility classes
+@each $color, $shade-map in $colors {
+	@each $shade, $value in $shade-map {
+		.clr-#{$color}-#{$shade} {
+			color: $value;
+		}
+		.bg-#{$color}-#{$shade} {
+			background-color: $value;
+		}
+	}
+}
