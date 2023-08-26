@@ -1,16 +1,17 @@
 @use "./base" as *;
 
 body {
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	min-height: 100vh;
 	font-size: $fs-14;
 	font-weight: $fw-regular;
 	font-family: $ff-base;
 	color: $clr-primary-200;
-	background-color: $clr-primary-800;
+	background: url("/img/bg-mobile.png") no-repeat $clr-primary-800;
+	background-size: cover;
 }
-
 .container {
 	width: min(100% - 3rem, 69.375rem);
 	margin-inline: auto;
