@@ -59,14 +59,19 @@ li {
 
 .usage {
 	position: relative;
-	text-align: center;
 	padding: 2rem;
 	padding-bottom: 3.25rem;
 	border-radius: 10px;
 
 	label {
+		text-align: center;
+
 		span:first-of-type {
 			font-weight: $fw-bold;
+		}
+
+		@include media(medium) {
+			text-align: left;
 		}
 	}
 
