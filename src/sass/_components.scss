@@ -54,6 +54,7 @@ li {
 }
 
 .usage {
+	position: relative;
 	text-align: center;
 	padding: 2rem;
 	padding-bottom: 3.25rem;
@@ -74,9 +75,10 @@ li {
 }
 
 .counter {
+	position: absolute;
 	width: 11.25rem;
 	display: inline;
-	transform: translateY(-70%);
+	transform: translateY(170%);
 	justify-self: center;
 	border-radius: 10px;
 	line-height: 2.5rem;
