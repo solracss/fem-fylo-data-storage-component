@@ -13,28 +13,35 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav">
+    <div class="container grid-flow">
+        <div class="nav bg-primary-400 grid-flow">
             <img class="logo" src="./public/img/logo.svg" alt="">
-            <ul class="nav-items">
-                <li><img class="nav-item" src="./public/img/icon-document.svg" alt=""></li>
-                <li><img class="nav-item" src="./public/img/icon-folder.svg" alt=""></li>
-                <li><img class="nav-item" src="./public/img/icon-upload.svg" alt=""></li>
+            <ul class="nav-items flex-flow">
+                <li class="bg-primary-800"><img class="nav-item" src="./public/img/icon-document.svg" alt=""></li>
+                <li class="bg-primary-800"><img class="nav-item" src="./public/img/icon-folder.svg" alt=""></li>
+                <li class="bg-primary-800"><img class="nav-item" src="./public/img/icon-upload.svg" alt=""></li>
             </ul>
         </div>
-        <div class="usage">
-            <div class="meter">
-                <label for="">You’ve used <span>815 GB</span> of your storage</label>
-                <meter id="data-use" min="0" max="1000" value="815"></meter>
-                <p>0 GB</p>
-                <p>1000 GB</p>
+        <div class="usage bg-primary-400 grid-flow">
+            <label for="data-use">You’ve used <span>815 GB</span> of your storage</label>
+            <div>
+                <meter class="sr-only" id="data-use" min="750" max="1000" value="0" title="Actual usage of data">
+                </meter>
+                <div class="meter">
+                    <span></span>
+                </div>
+                <div class="flex-flow axis">
+                    <p>0 GB</p>
+                    <p>1000 GB</p>
+                </div>
             </div>
         </div>
         <div class="counter">
             <p>185 <span>GB left</span></p>
         </div>
     </div>
-
 </body>
+<script>
+</script>
 
 </html>

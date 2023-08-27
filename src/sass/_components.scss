@@ -1,1 +1,81 @@
 @use "./base" as *;
+
+.meter {
+	$border-radius: 10px;
+
+	padding: 3px;
+	height: 20px;
+	background: $clr-primary-800;
+	border-radius: $border-radius;
+
+	span {
+		display: block;
+		height: 100%;
+		border-radius: $border-radius;
+		background-image: $gradient-primary;
+		width: 75%;
+	}
+}
+
+li {
+	list-style: none;
+}
+
+.nav {
+	padding: 2.5rem;
+	border-radius: 10px 100px 10px 10px;
+	gap: 2rem;
+
+	&-items {
+		gap: 1rem;
+
+		& li {
+			padding: 0.75rem;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+.usage {
+	text-align: center;
+	padding: 2rem;
+	padding-bottom: 3.25rem;
+	border-radius: 10px;
+
+	label {
+		span:first-of-type {
+			font-weight: $fw-bold;
+		}
+	}
+}
+
+.axis {
+	margin-top: 0.625rem;
+	font-size: $fs-12;
+	font-weight: $fw-bold;
+	justify-content: space-between;
+}
+
+.counter {
+	width: 11.25rem;
+	display: inline;
+	transform: translateY(-70%);
+	justify-self: center;
+	border-radius: 10px;
+	line-height: 2.5rem;
+	padding: 1rem 1.5rem;
+	background-color: $clr-neutral-100;
+	color: $clr-primary-800;
+	font-size: $fs-40;
+	font-weight: $fw-bold;
+
+	span {
+		opacity: 0.5;
+		font-size: $fs-12;
+		text-transform: uppercase;
+		vertical-align: middle;
+	}
+}
