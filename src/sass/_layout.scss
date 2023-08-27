@@ -11,6 +11,12 @@ body {
 	color: $clr-primary-200;
 	background: url("/img/bg-mobile.png") no-repeat $clr-primary-800;
 	background-size: cover;
+
+	@include media(medium) {
+		background: url("/img/bg-desktop.png") no-repeat $clr-primary-800;
+		background-position: bottom;
+		background-size: contain;
+	}
 }
 
 .flex-flow {
