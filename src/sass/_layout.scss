@@ -15,7 +15,7 @@ body {
 	@include media(medium) {
 		background: url("/img/bg-desktop.png") no-repeat $clr-primary-800;
 		background-position: bottom;
-		background-size: contain;
+		background-size: 100% 50%;
 	}
 }
 
