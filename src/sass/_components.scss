@@ -51,6 +51,10 @@ li {
 			justify-content: center;
 		}
 	}
+
+	@include media(large) {
+		width: 21.875rem;
+	}
 }
 
 .usage {
@@ -65,6 +69,12 @@ li {
 			font-weight: $fw-bold;
 		}
 	}
+
+	@include media(large) {
+		width: 33.75rem;
+		margin-top: 3rem;
+		padding: 2.5rem;
+	}
 }
 
 .axis {
@@ -76,9 +86,8 @@ li {
 
 .counter {
 	position: absolute;
-	width: 11.25rem;
-	display: inline;
-	transform: translateY(170%);
+	width: 10.75rem;
+	bottom: -2.2rem;
 	justify-self: center;
 	border-radius: 10px;
 	line-height: 2.5rem;

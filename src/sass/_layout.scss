@@ -12,10 +12,6 @@ body {
 	background: url("/img/bg-mobile.png") no-repeat $clr-primary-800;
 	background-size: cover;
 }
-.container {
-	width: min(100% - 3rem, 69.375rem);
-	margin-inline: auto;
-}
 
 .flex-flow {
 	display: flex;
@@ -24,4 +20,15 @@ body {
 .grid-flow {
 	display: grid;
 	gap: 1rem;
+}
+
+.container {
+	width: min(100% - 3rem, 69.375rem);
+	margin-inline: auto;
+
+	@include media(large) {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+	}
 }
