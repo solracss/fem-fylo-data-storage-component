@@ -33,3 +33,16 @@ Users should be able to:
 [![My Skills](https://skillicons.dev/icons?i=html,css,sass,vscode,vite)](https://skillicons.dev)
 
 ### What I learned
+
+1. Create trianle in CSS [Source](https://css-tricks.com/snippets/css/css-triangle/)
+
+```css
+.arrow-up {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+
+	border-bottom: 5px solid black;
+}
+```
