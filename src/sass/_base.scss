@@ -43,6 +43,17 @@ $breakpoints: (
 	}
 }
 
+@mixin media-down($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media screen and (max-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
 // colors
 $clr-neutral-100: hsl(0, 0%, 100%);
 

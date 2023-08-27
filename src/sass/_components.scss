@@ -52,7 +52,7 @@ li {
 		}
 	}
 
-	@include media(large) {
+	@include media(medium) {
 		width: 21.875rem;
 	}
 }
@@ -75,7 +75,7 @@ li {
 		}
 	}
 
-	@include media(large) {
+	@include media(medium) {
 		width: 33.75rem;
 		margin-top: 3rem;
 		padding: 2.5rem;
@@ -114,7 +114,7 @@ li {
 		right: 0;
 		opacity: 1;
 
-		@media (max-width: 64rem) {
+		@include media-down(medium) {
 			opacity: 0;
 		}
 	}
@@ -126,7 +126,7 @@ li {
 		vertical-align: middle;
 	}
 
-	@include media(large) {
+	@include media(medium) {
 		justify-self: end;
 		bottom: 8.5rem;
 		right: 2.2rem;
